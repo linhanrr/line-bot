@@ -1,7 +1,7 @@
 from flask import Flask, request, abort  #用flask來架設伺服器
 
 from linebot import (
-    LineBotApi, WebhookHandler
+    LineBotApi, WebhookHandler,
 )
 from linebot.exceptions import (
     InvalidSignatureError
@@ -48,13 +48,6 @@ def handle_message(event):
         s = '你這淫魔'
     elif msg == '悠悠':
         s = '悠悠辛苦了'
-    elif msg == 'tokyo':
-        line_bot_api.LocationSendMessage(
-        title='my location',
-        address='Tokyo',
-        latitude=35.65910807942215,
-        longitude=139.70372892916203
-    )
 
     line_bot_api.reply_message(
         event.reply_token,
