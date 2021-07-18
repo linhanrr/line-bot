@@ -50,10 +50,10 @@ def handle_message(event):
         s = '悠悠辛苦了'
     elif msg == 'tokyo':
         line_bot_api.LocationSendMessage(
-    title='my location',
-    address='Tokyo',
-    latitude=35.65910807942215,
-    longitude=139.70372892916203
+        title='my location',
+        address='Tokyo',
+        latitude=35.65910807942215,
+        longitude=139.70372892916203
     )
 
     line_bot_api.reply_message(
@@ -64,7 +64,7 @@ def handle_message(event):
         StickerSendMessage(
         package_id='1',
         sticker_id='1'
-        ))
+    ))
 
 
 if __name__ == "__main__":   #不希望import的時候程式碼就被執行
