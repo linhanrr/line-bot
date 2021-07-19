@@ -59,6 +59,15 @@ def handle_message(event):
 
         return
 
+    elif '想壞壞' in msg:
+        image_message = ImageSendMessage(
+            original_content_url='https://i.imgur.com/jkzgwt2.png',
+            preview_image_url='https://i.imgur.com/AeJ8yOR.jpg')
+        
+        line_bot_api.reply_message(
+            event.reply_token,
+            image_message)
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=s))
