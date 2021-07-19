@@ -48,18 +48,20 @@ def handle_message(event):
         s = '你這淫魔'
     elif msg == '悠悠':
         s = '悠悠辛苦了'
+    elif msg '給我貼圖' in msg:
+        sticker_message = StickerSendMessage(
+            package_id='11539',
+            sticker_id='52114110')
+
+        line_bot_api.reply_message(
+            event.reply_token,
+            sticker_message)
 
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=s))
 
-    sticker_message = StickerSendMessage(
-        package_id='1',
-        sticker_id='1')
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        sticker_message)
 
 
 if __name__ == "__main__":   #不希望import的時候程式碼就被執行
