@@ -67,7 +67,20 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             image_message)
+        return
 
+    elif '鄭雅如' in msg:
+        s = '你好醜'
+
+        image_message = ImageSendMessage(
+            original_content_url='https://i.imgur.com/ikS4Fw2.jpg',
+            preview_image_url='https://i.imgur.com/PRPt0RU.jpg')
+
+        line_bot_api.reply_message(
+            event.reply_token,
+            image_message)
+        
+        
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=s))
