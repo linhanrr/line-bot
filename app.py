@@ -7,7 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, StickerSendMessage, LocationSendMessage
+    MessageEvent, TextMessage, TextSendMessage, StickerSendMessage,
 )
 
 app = Flask(__name__)
@@ -56,8 +56,7 @@ def handle_message(event):
         event.reply_token,
         StickerSendMessage(
         package_id='1',
-        sticker_id='1'
-    ))
+        sticker_id='1'))
 
 
 if __name__ == "__main__":   #不希望import的時候程式碼就被執行
